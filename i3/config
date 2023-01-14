@@ -38,6 +38,9 @@ exec --no-startup-id xcape -e "Super_L=Escape"
 # disable touchpad on x220
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 
+#Create screenshot
+bindsym $mod+s exec flameshot gui
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -68,7 +71,7 @@ bindsym $mod+b exec python ~/.config/i3/runOrFocus.py "Firefox" firefox
 # start thunderbird
 bindsym $mod+m exec python ~/.config/i3/runOrFocus.py "Thunderbird" thunderbird
 # lock screen
-bindsym $mod+q exec  --no-startup-id sleep 1 && xset dpms force suspend 
+bindsym $mod+q exec  --no-startup-id ~/.config/i3/locki3.sh
 # kill focused window
 bindsym $mod+Shift+q kill
 

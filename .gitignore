@@ -1,3 +1,5 @@
 pulse
 htop
 dconf
+*.old
+
