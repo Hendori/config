@@ -8,45 +8,50 @@
 
 general {
         colors = false
-        interval = 10
+        interval = 15
 }
 
-order += "wireless _first_"
+order += "wireless wlan0"
 order += "ethernet _first_"
 order += "battery all"
-order += "disk /"
-order += "load"
+order += "cpu_usage"
+order += "disk /home"
 order += "memory"
 order += "tztime local"
 
-wireless _first_ {
-        format_up = "Wireless: (%quality at %essid) %ip"
-        format_down = "W: down"
+wireless wlan0 {
+        format_up = ": (%quality at %essid, %bitrate) %ip"
+        format_down = ": 😥"
+}
+
+cpu_usage {
+    format = " %usage"
 }
 
 ethernet _first_ {
-        format_up = "Ethernet: %ip (%speed)"
-        format_down = "E: down"
+        format_up = " (%speed)"
+        format_down = "🛑"
 }
 
 battery all {
-        format = "%status %percentage %remaining"
+        format = "%status %percentage %remaining %emptytime"
+        format_down = "No battery"
+        status_chr = "⚡"
+        status_bat = "🔋"
+        status_unk = "? UNK"
+        status_full = "😁"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 10
 }
 
-disk "/" {
-        format = "%avail"
-}
-
-load {
-        format = "%1min"
+disk "/home" {
+        format = "💽%avail"
 }
 
 memory {
-        format = "%used | %available"
-        threshold_degraded = "1G"
-        format_degraded = "MEMORY < %available"
+        format = "🧠%used"
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format ="📅%Y-%m-%d 🕰️%H:%M:%S"
 }
