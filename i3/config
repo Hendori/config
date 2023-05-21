@@ -92,6 +92,8 @@ bindsym $mod+m exec python ~/.config/i3/runOrFocus.py "Thunderbird" thunderbird
 bindsym $mod+q exec  --no-startup-id ~/.local/bin/lock.sh
 # kill focused window
 bindsym $mod+Shift+q kill
+# setup displays
+bindsym $mod+Shift+d exec --no-startup-id ./displayselect.sh
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"

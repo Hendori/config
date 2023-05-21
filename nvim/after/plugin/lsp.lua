@@ -5,7 +5,6 @@ lsp.preset("recommended")
 lsp.ensure_installed({
     'tsserver',
     'jdtls',
-    'sumneko_lua',
     'rust_analyzer',
 })
 
