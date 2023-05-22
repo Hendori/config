@@ -227,3 +227,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Automatically start applications
+exec --no-startup-id i3-msg 'workspace 2:Web; exec firefox, workspace 1:Terminal; exec alacritty -e tmux'
