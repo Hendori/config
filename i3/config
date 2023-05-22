@@ -83,7 +83,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec python ~/.config/i3/runOrFocus.py "kitty" kitty
+bindsym $mod+Return exec python ~/.config/i3/runOrFocus.py "alacritty" alacritty
 # start firefox
 bindsym $mod+b exec python ~/.config/i3/runOrFocus.py "Firefox" firefox
 # start thunderbird

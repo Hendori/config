@@ -3,7 +3,7 @@ scrot /tmp/screen.png
 #random_file="${files[RANDOM % ${#files[@]}]}"
 #printf "%s\n" ${random_file}
 #magick ${random_file} -paint 1 /tmp/screen.png
-magick /tmp/screen.png -scale 25% -spread 1 -scale 400% /tmp/screen.png
+magick /tmp/screen.png -spread 3 /tmp/screen.png
 #magick /tmp/screen.png -blend random_file /tmp/screen.png
 
 #lock screen
