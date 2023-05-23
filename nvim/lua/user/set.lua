@@ -8,7 +8,6 @@ o.softtabstop = 4
 o.shiftwidth = 4
 o.expandtab = true
 
-
 o.smartindent = true
 
 o.wrap = false
@@ -29,5 +28,4 @@ o.isfname:append("@-@")
 o.updatetime = 50
 
 o.colorcolumn = "80"
-
 

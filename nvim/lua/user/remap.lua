@@ -1,3 +1,4 @@
+print('loading remap')
 vim.g.mapleader = ";"
 local s = vim.keymap.set
 
