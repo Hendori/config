@@ -3,12 +3,13 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export CABAL_CONFIG="$HOME/.config/cabal/config"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="fino-time"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -100,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 #export PATH=$PATH:/home/hendori/.config/scripts
 export PATH=$PATH:/home/hendori/.config/scripts
+export PATH=$HOME/.cabal/bin:$PATH
 fpath=(~/.zsh/zsh-completions/src $fpath)
 #starting pywal
 (cat ~/.cache/wal/sequences &)
@@ -114,6 +116,9 @@ alias w='cd ~/Wallpaper'
 alias ~='cd ~'
 alias ls='ls -lsa'
 alias tmux='tmux -f ".config/tmux/tmux.conf"'
+
+# vim mode
+bindkey -v
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
