@@ -64,7 +64,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- .local/bin/lock.sh --nofo
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-exec --no-startup-id xss-lock -- ~/.local/bin/lock.sh
+exec --no-startup-id xss-lock -- ~/.config/scripts/lock.sh
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -86,11 +86,9 @@ bindsym $mod+b exec python ~/.config/i3/runOrFocus.py "Firefox" firefox
 # start thunderbird
 bindsym $mod+m exec python ~/.config/i3/runOrFocus.py "Thunderbird" thunderbird
 # lock screen
-bindsym $mod+q exec  --no-startup-id ~/.local/bin/lock.sh
+bindsym $mod+q exec  --no-startup-id ~/.config/scripts/lock.sh
 # kill focused window
 bindsym $mod+Shift+q kill
-# setup displays
-bindsym $mod+Shift+d exec --no-startup-id ./displayselect.sh
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"

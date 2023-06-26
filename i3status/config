@@ -7,7 +7,7 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = false
+        colors = true
         interval = 1
 }
 
@@ -45,13 +45,13 @@ battery all {
 }
 
 disk "/home" {
-        format = "💽%avail"
+        format = "💽 %avail"
 }
 
 memory {
-        format = "🧠%used"
+        format = "🧠 %used"
 }
 
 tztime local {
-        format ="📅%Y-%m-%d 🕰️%H:%M:%S"
+        format ="📅 %Y-%m-%d 🕰️%H:%M:%S"
 }
