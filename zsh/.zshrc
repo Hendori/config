@@ -108,11 +108,9 @@ fpath=(~/.zsh/zsh-completions/src $fpath)
 source ~/.cache/wal/colors-tty.sh
 #Making sure that super is also able to be used as escape
 xcape -e "Super_L=Escape"
-#plugins
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 #aliasses
 alias vim=nvim
-alias w='cd ~/Wallpaper'
+alias w='cd ~/wallpaper'
 alias ~='cd ~'
 alias ls='ls -lsa'
 alias tmux='tmux -f ".config/tmux/tmux.conf"'

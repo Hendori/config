@@ -20,38 +20,38 @@ order += "memory"
 order += "tztime local"
 
 wireless wlan0 {
-        format_up = ": (%quality at %essid, %bitrate) %ip"
-        format_down = ": 😥"
+        format_up = "wifi: (%quality at %essid, %bitrate) %ip"
+        format_down = "wifi: down"
 }
 
 cpu_usage {
-    format = " %usage"
+    format = "cpu %usage"
 }
 
 ethernet _first_ {
-        format_up = " (%speed)"
-        format_down = "🛑"
+        format_up = "ethernet (%speed)"
+        format_down = "ethernet down"
 }
 
 battery all {
         format = "%status %percentage %remaining %emptytime"
         format_down = "No battery"
-        status_chr = "⚡"
-        status_bat = "🔋"
-        status_unk = "? UNK"
-        status_full = "😁"
+        status_chr = "charging"
+        status_bat = "using battery"
+        status_unk = "oh ooh"
+        status_full = "Full"
         path = "/sys/class/power_supply/BAT%d/uevent"
         low_threshold = 10
 }
 
 disk "/home" {
-        format = "💽 %avail"
+        format = "nvme space %avail"
 }
 
 memory {
-        format = "🧠 %used"
+        format = "memory %used"
 }
 
 tztime local {
-        format ="📅 %Y-%m-%d 🕰️%H:%M:%S"
+        format ="%Y-%m-%d %H:%M:%S"
 }

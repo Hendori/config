@@ -3,4 +3,5 @@ htop
 dconf
 *.old
 *.tdb
+chromium/*
 
